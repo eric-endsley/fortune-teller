@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $("form#fortune_survery").submit(function(event){
+  $("form#fortune_survey").submit(function(event){
     event.preventDefault();
 
     let userResponses = [];
@@ -12,18 +12,15 @@ $(document).ready(function(){
     $("input:checkbox[name=bad-luck]:checked").each(function(){
       const badLuckOmens = $(this).val();
       userResponses2.push(badLuckOmens);
-      console.log(userResponses)
-      console.log(userResponses2)
     });
-
 
 
 
   
       function countAnswers(responses, input) {
         let count = 0;
-        for (let i = 0; i < answers.length; i++) {
-          if (answers[i] === input) {
+        for (let i = 0; i < responses.length; i++) {
+          if (responses[i] === input) {
             count++;
           }
         }
@@ -33,6 +30,7 @@ $(document).ready(function(){
       const countGood = countAnswers(userResponses, "good");
       const countBad = countAnswers(userResponses2, "bad");
 
-  
+      console.log(countGood)
+      console.log(countBad)
   });
 });
