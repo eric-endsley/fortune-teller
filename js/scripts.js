@@ -14,23 +14,28 @@ $(document).ready(function(){
       userResponses2.push(badLuckOmens);
     });
 
-
-
-  
-      function countAnswers(responses, input) {
-        let count = 0;
-        for (let i = 0; i < responses.length; i++) {
-          if (responses[i] === input) {
-            count++;
-          }
+    function countAnswers(responses, input) {
+      let count = 0;
+      for (let i = 0; i < responses.length; i++) {
+        if (responses[i] === input) {
+          count++;
         }
-        return count;
       }
-  
-      const countGood = countAnswers(userResponses, "good");
-      const countBad = countAnswers(userResponses2, "bad");
+      return count;
+    }
 
-      console.log(countGood)
-      console.log(countBad)
+    const countGood = countAnswers(userResponses, "good");
+    const countBad = countAnswers(userResponses2, "bad");
+
+    if (countGood === countBad) {
+      $("#meh-fortune").show();
+      $("#unlucky-fortune, #lucky-fortune").hide();
+    } else if (countGood > countBad) {
+      $("#lucky-fortune").show();
+      $("#unlucky-fortune, #meh-fortune").hide();
+    } else if (countBad > countGood) {
+      $("#unlucky-fortune").show();
+      $("#lucky-fortune, #meh-fortune").hide();
+    }
   });
 });
