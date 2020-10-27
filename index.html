@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Fortune Teller</title>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.5.1.js"></script>
+  <script src="js/scripts.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h2>Fortune</h2>
+    </div>
+    <form id="fortune_survey">
+      <div class="form-group">
+        <p>In the past year, I have encountered these omens of good luck:</p>
+        <input type="checkbox" name="good-luck" value="good"> Saw a rainbow.<br>
+        <input type="checkbox" name="good-luck" value="good">Found a four leaf clover.<br>
+        <input type="checkbox" name="good-luck" value="good">Picked up a lucky penny.<br>
+        <input type="checkbox" name="good-luck" value="good">Found $100 on a deserted sidewalk.<br>
+      </div>
+      <div class="form-group">
+        <p>In the past year, I have encountered these omens of bad luck:</p>
+        <input type="checkbox" name="bad-luck" value="bad"> I broke a mirror.<br>
+        <input type="checkbox" name="bad-luck" value="bad">I saw a black cat.<br>
+        <input type="checkbox" name="bad-luck" value="bad">I ate a very spicy meatball.<br>
+        <input type="checkbox" name="bad-luck" value="bad">A disembodied foot fell off a bridge and hit me in the head.<br>
+      <button type="submit">Submit Survey</button>
+    </form>
+    <span id="lucky-fortune">
+      <p><b>You are extremely lucky!</b></p>
+    </span>
+    <br>
+    <span id="meh-fortune">
+      <p><b>You are neither lucky nor unlucky. Kind of boring actually.</b></p>
+    </span>
+  </div>
+  <br>
+  <span id="unlucky-fortune">
+    <p><b>You are very unlucky! Stay away from me!</b></p>
+  </span>
+</body>
+</html>
